@@ -10,7 +10,7 @@ source:
   sha256: e7bdf166c32de7aef5a626953f536ca4f1c6115f16795354c8c3f38f1da1fe10
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   skip: true  # [py<39]
 
@@ -27,7 +27,7 @@ requirements:
     - azure-common >=1.1
     - azure-mgmt-core >=1.5.0
 
-tests:
+test:
   imports:
     - azure.mgmt.eventhub
     - azure.mgmt.eventhub.aio
